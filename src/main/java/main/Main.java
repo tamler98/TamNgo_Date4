@@ -28,7 +28,9 @@ public class Main {
         List<CustomerEntity> lisCusByPhoneOrEmail = customerRepository.getCustomerByPhoneOrEmail("0384203345", "loannguyen95@gmail.com");
         List<CustomerEntity> lisCusByAgeAndSex = customerRepository.getCustomerByAgeAndSex();
 
-
+        System.out.println("Find by Id");
+        System.out.println(customerRepository.findById(3));
+        
         System.out.println("* List find All: ");
         for (CustomerEntity customer:lisCus) {
             System.out.println(customer.toString());
