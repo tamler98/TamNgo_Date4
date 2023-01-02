@@ -25,7 +25,7 @@ public class Main {
         List<CustomerEntity> lisCus2 = (List<CustomerEntity>) customerRepository.findByEmail("loannguyen95@gmail.com");
         List<CustomerEntity> lisCus3 = (List<CustomerEntity>) customerRepository.findByPhone("0354222111");
         List<CustomerEntity> lisCusByName = customerRepository.getCustomerByName("Ty");
-        List<CustomerEntity> lisCusByPhoneOrEmail = customerRepository.getCustomerByPhoneOrEmail("0384203345", "loannguyen95@gmail.com");
+        List<CustomerEntity> listCustomerByPOrE = customerRepository.findByPhoneOrEmail("0384203346", "loannguyen95@gmail.com");
         List<CustomerEntity> lisCusByAgeAndSex = customerRepository.getCustomerByAgeAndSex();
 
         System.out.println("Find by Id");
@@ -58,8 +58,8 @@ public class Main {
         }
 
         System.out.println("* List find by Phone or Email: ");
-        for (CustomerEntity customer:lisCusByPhoneOrEmail) {
-            System.out.println(customer.toString());
+        for (CustomerEntity cus: listCustomerByPOrE) {
+            System.out.println(cus.toString());
         }
 
         System.out.println("* List Men Customer Have Age Between 20 and 30: ");
